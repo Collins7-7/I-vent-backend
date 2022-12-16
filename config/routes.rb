@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :users, only: [:show, :index, :create]
+  resources :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   post "/signup", to: "users#create"
   get "/me", to: "users#show"
   get "/users", to: "users#index"
+  delete "/users/:id", to: "users#destroy"
+  patch "/users/:id", to: "users#update"
 
 
   
