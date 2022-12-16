@@ -11,8 +11,4 @@ Rails.application.routes.draw do
   patch "/users/:id", to: "users#update"
 
 
-  
-
-
-  # get '/hello', to: 'application#hello_world'
 end
