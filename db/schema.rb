@@ -20,6 +20,14 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_16_221225) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "categories", force: :cascade do |t|
+    t.string "name"
+    t.string "description"
+    t.string "image_url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "mpesas", force: :cascade do |t|
     t.string "phoneNumber"
     t.string "amount"
